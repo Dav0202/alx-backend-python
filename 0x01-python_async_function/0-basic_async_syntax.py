@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-""" async basics 
-"""
+""" async basics """
 import asyncio
 import random
 
