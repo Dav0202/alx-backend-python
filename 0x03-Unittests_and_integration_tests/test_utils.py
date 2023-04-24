@@ -56,6 +56,7 @@ class TestMemoize(unittest.TestCase):
         the correct result is returned but only once
         """
 
+
         class TestClass:
             """ Test Class for to wrap around memoize """
 
