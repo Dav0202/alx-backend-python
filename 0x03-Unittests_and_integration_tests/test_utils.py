@@ -50,7 +50,6 @@ class TestGetJson(unittest.TestCase):
 
 class TestMemoize(unittest.TestCase):
     """ Class for Testing Memoize """
-
     def test_memoize(self):
         """ Test that when calling a_property twice, the correct result
         is returned but only once
@@ -58,7 +57,6 @@ class TestMemoize(unittest.TestCase):
 
         class TestClass:
             """ Test Class for to wrap around memoize """
-
             def a_method(self):
                 return 42
 
