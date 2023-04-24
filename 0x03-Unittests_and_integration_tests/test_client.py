@@ -70,8 +70,6 @@ class TestGithubOrgClient(unittest.TestCase):
     ("org_payload", "repos_payload", "expected_repos", "apache2_repos"),
     TEST_PAYLOAD
 )
-
-
 class TestIntegrationGithubOrgClient(unittest.TestCase):
     """ Class for Integration test of fixtures """
 
@@ -79,9 +77,8 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
     def setUpClass(cls):
         """A class method called before tests """
         config = {'return_value.json.side_effect':
-                  [
-                      cls.org_payload, cls.repos_payload,
-                      cls.org_payload, cls.repos_payload
+                  [cls.org_payload, cls.repos_payload,
+                   cls.org_payload, cls.repos_payload
                   ]
                   }
         cls.get_patcher = patch('requests.get', **config)
