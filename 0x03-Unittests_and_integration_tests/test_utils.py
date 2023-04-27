@@ -19,7 +19,7 @@ class TestAccessNestedMap(unittest.TestCase):
     def test_access_nested_map(self, nested_map, path, expected):
         """ Test that the method returns """
         self.assertEqual(access_nested_map(nested_map, path), expected)
-        
+
     @parameterized.expand([
         ({}, ("a",), 'a'),
         ({"a": 1}, ("a", "b"), 'b')
@@ -30,7 +30,7 @@ class TestAccessNestedMap(unittest.TestCase):
             access_nested_map(nested_map, path)
         self.assertEqual(f"KeyError('{expected}')", repr(err.exception))
 
-        
+
 class TestGetJson(unittest.TestCase):
     """ Class for Testing Json """
 
