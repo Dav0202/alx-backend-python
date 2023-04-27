@@ -22,7 +22,7 @@ class TestGithubOrgClient(unittest.TestCase):
         test_class = GithubOrgClient(input)
         test_class.org()
         mock.assert_called_once_with(f'https://api.github.com/orgs/{input}')
-        
+
     def test_public_repos_url(self):
         """ Test that the result of _public_repos_url
         """
@@ -79,8 +79,7 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
 
         config = {'return_value.json.side_effect':
                   [cls.org_payload, cls.repos_payload,
-                   cls.org_payload, cls.repos_payload
-                  ]
+                   cls.org_payload, cls.repos_payload]
                   }
         cls.get_patcher = patch('requests.get', **config)
 
